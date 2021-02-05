@@ -6,7 +6,6 @@ pipeline
 	
 	tools {
         jdk 'JDK8_Mac'
-		gradle 'Gradle4.5_Mac'
     }
 	
 	stages{
