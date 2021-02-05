@@ -1,11 +1,12 @@
 pipeline
 {
 	agent {
-        label 'Slave4_Mac'
+        label 'Slave_Mac'
     }
 	
 	tools {
         jdk 'JDK8_Mac'
+		gradle 'Gradle4.5_Mac'
     }
 	
 	stages{
