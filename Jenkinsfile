@@ -35,6 +35,15 @@ pipeline
              }
         }
 
+        stage('Build') {
+            steps{
+            echo "------------>Build<------------"
+                //Construir sin tarea test que se ejecutó previamente
+                sh './gradlew build -x test'
+            }
+        }
+
+
 	}
 	
 	post {
@@ -43,7 +52,6 @@ pipeline
 		}
 		success {
 		  echo 'This will run only if successful'
-
 		}
 		failure {
 		  echo 'This will run only if failed'
