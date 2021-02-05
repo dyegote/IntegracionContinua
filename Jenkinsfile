@@ -1,7 +1,7 @@
 pipeline
 {
 	agent {
-        label 'Slave_Mac'
+        label 'Slave4_Mac'
     }
 	
 	tools {
