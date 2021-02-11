@@ -15,6 +15,14 @@ pipeline
 			}
 		}
 		
+		stage('Build') {
+            steps{
+            echo "------------>Build<------------"
+                //Construir sin tarea test que se ejecutó previamente
+                sh './gradlew build -x test'
+            }
+        }
+		
 		stage('Compile & Unit Tests') {
 			steps{
 				echo "------------>>Clean<------------"
@@ -35,13 +43,7 @@ pipeline
              }
         }
 
-        stage('Build') {
-            steps{
-            echo "------------>Build<------------"
-                //Construir sin tarea test que se ejecutó previamente
-                sh './gradlew build -x test'
-            }
-        }
+        
 
 
 	}
